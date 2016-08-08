@@ -45,12 +45,13 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         tvTitle.setText(movie.getOriginalTitle());
         tvOverview.setText(movie.getOverview());
 
-
         int orientation = getContext().getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            Picasso.with(getContext()).load(movie.getBackdropPath()).into(imageView);
+            Picasso.with(getContext()).load(movie.getBackdropPath()).fit().centerCrop().placeholder(R.drawable.placeholder)
+                    .error(R.drawable.placeholdererror).into(imageView);
         } else if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            Picasso.with(getContext()).load(movie.getPosterPath()).into(imageView);
+            Picasso.with(getContext()).load(movie.getPosterPath()).fit().centerCrop().placeholder(R.drawable.placeholder)
+                    .error(R.drawable.placeholdererror).into(imageView);
         }
 
 
