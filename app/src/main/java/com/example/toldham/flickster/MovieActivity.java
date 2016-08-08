@@ -29,6 +29,9 @@ public class MovieActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.camera_logo);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
         setContentView(R.layout.activity_movie);
 
         swipeMovieRefresh();
