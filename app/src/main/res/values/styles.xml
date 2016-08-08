@@ -1,11 +1,30 @@
 <resources>
+    <color name="darkish_gray">#4d4d4d</color>
+    <color name="lightish_blue">#e6f2ff</color>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:actionBarStyle">@style/FlicksterActionBar</item>
+        <item name="android:actionBarTabTextStyle">@style/FlicksterActionBarTabText</item>
+
+        <item name="actionBarStyle">@style/FlicksterActionBar</item>
+        <item name="actionBarTabTextStyle">@style/FlicksterActionBarTabText</item>
+    </style>
+
+    <style name="FlicksterActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/darkish_gray</item>
+        <item name="android:titleTextStyle">@style/FlicksterActionBar.TitleTextStyle</item>
+
+        <item name="background">@color/darkish_gray</item>
+        <item name="titleTextStyle">@style/FlicksterActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="FlicksterActionBar.TitleTextStyle"
+        parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/lightish_blue</item>
+    </style>
+
+    <style name="FlicksterActionBarTabText" parent="@style/Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textColor">@color/lightish_blue</item>
     </style>
 
 </resources>
